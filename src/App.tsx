@@ -9,6 +9,7 @@ function App() {
     addTodo,
     setTodoCompleted,
     deleteTodo,
+    deleteAllTodos,
     deleteAllCompletedTodos,
   } = useTodos();
 
@@ -23,7 +24,11 @@ function App() {
           onDelete={deleteTodo}
         />
       </div>
-      <TodoSummary todos={todos} deleteAllCompleted={deleteAllCompletedTodos} />
+      <TodoSummary
+        todos={todos}
+        deleteAll={deleteAllTodos}
+        deleteAllCompleted={deleteAllCompletedTodos}
+      />
     </main>
   );
 }

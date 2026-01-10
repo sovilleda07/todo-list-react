@@ -36,6 +36,10 @@ export default function useTodos() {
     setTodos((prevTodos) => prevTodos.filter((todo) => todo.id !== id));
   }
 
+  function deleteAllTodos() {
+    setTodos([]);
+  }
+
   function deleteAllCompletedTodos() {
     setTodos((prevTodos) => prevTodos.filter((todo) => !todo.completed));
   }
@@ -45,6 +49,7 @@ export default function useTodos() {
     setTodoCompleted,
     addTodo,
     deleteTodo,
+    deleteAllTodos,
     deleteAllCompletedTodos,
   };
 }

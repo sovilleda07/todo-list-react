@@ -2,11 +2,13 @@ import type { Todo } from "../types/todo";
 
 interface TodoSummaryProps {
   todos: Todo[];
+  deleteAll: () => void;
   deleteAllCompleted: () => void;
 }
 
 export default function TodoSummary({
   todos,
+  deleteAll,
   deleteAllCompleted,
 }: TodoSummaryProps) {
   const completedTodos = todos.filter((todo) => todo.completed);
@@ -16,14 +18,25 @@ export default function TodoSummary({
       <p className="text-sm font-medium">
         {completedTodos.length}/{todos.length} todos completed
       </p>
-      {completedTodos.length > 0 && (
-        <button
-          onClick={deleteAllCompleted}
-          className="text-violet-red hover:underline text-sm font-medium"
-        >
-          Delete all completed
-        </button>
-      )}
+
+      <div className="flex items-center justify-center gap-8">
+        {todos.length > 0 && (
+          <button
+            onClick={deleteAll}
+            className="text-violet-red hover:underline text-sm font-medium"
+          >
+            Delete all
+          </button>
+        )}
+        {completedTodos.length > 0 && (
+          <button
+            onClick={deleteAllCompleted}
+            className="text-violet-red hover:underline text-sm font-medium"
+          >
+            Delete all completed
+          </button>
+        )}
+      </div>
     </div>
   );
 }
