@@ -15,21 +15,29 @@ export default function TodoItem({
   return (
     <div className="flex items-center gap-1">
       <label
-        className="flex items-center gap-2 border rounded-md p-2 border-gray-400 bg-white hover:bg-slate-50
-      grow"
+        className={`flex items-center gap-2 border rounded-md p-2 grow font-normal
+        ${
+          todo.completed
+            ? "bg-violet-red border-violet-red"
+            : "bg-white border-white"
+        }  `}
       >
         <input
           type="checkbox"
-          className="scale-125"
+          className="scale-125 accent-space-cadet"
           checked={todo.completed}
           onChange={(e) => onCompletedChange(todo.id, e.target.checked)}
         />
-        <span className={todo.completed ? "line-through text-gray-400" : ""}>
+        <span
+          className={
+            todo.completed ? "line-through text-white" : "text-space-cadet"
+          }
+        >
           {todo.title}
         </span>
       </label>
-      <button onClick={() => onDelete(todo.id)} className="p-2">
-        <Trash2 size={20} className="text-gray-500" />
+      <button onClick={() => onDelete(todo.id)} className="p-1">
+        <Trash2 size={22} className="text-white" />
       </button>
     </div>
   );

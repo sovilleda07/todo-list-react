@@ -1,1 +1,9 @@
 @import "tailwindcss";
+
+@theme {
+  --color-space-cadet: #16315cff;
+  --color-violet-red: #eb5e92ff;
+  --color-cyclamen: #ed78a4ff;
+  --color-white: #fff;
+  --color-background: rgba(244, 208, 220, 0.2);
+}

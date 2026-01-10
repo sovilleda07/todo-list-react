@@ -21,7 +21,7 @@ export default function TodoList({
 
   return (
     <>
-      <div className="space-y-2">
+      <div className="bg-background space-y-2 p-3 rounded-md">
         {todosSorted.map((todo) => (
           <TodoItem
             key={todo.id}
@@ -32,7 +32,7 @@ export default function TodoList({
         ))}
       </div>
       {todos.length === 0 && (
-        <p className="text-center text-sm text-gray-500">
+        <p className="text-center text-sm text-white">
           No todos yet. Add a new one above
         </p>
       )}
