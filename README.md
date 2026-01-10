@@ -26,7 +26,7 @@ A sleek, functional task management application built with **React**, **TypeScri
 1. **Clone the repository**
 
    ```bash
-   git clone [https://github.com/sovilleda07/todo-list-react](https://github.com/sovilleda07/todo-list-react)
+   git clone https://github.com/sovilleda07/todo-list-react
    cd todo-list-react
 
    ```
