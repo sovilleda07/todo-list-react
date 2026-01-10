@@ -14,8 +14,8 @@ export default function TodoSummary({
   const completedTodos = todos.filter((todo) => todo.completed);
 
   return (
-    <div className="text-center space-y-2">
-      <p className="text-sm font-medium">
+    <div className="text-center space-y-3">
+      <p className="text-lg font-medium">
         {completedTodos.length}/{todos.length} todos completed
       </p>
 
@@ -23,7 +23,7 @@ export default function TodoSummary({
         {todos.length > 0 && (
           <button
             onClick={deleteAll}
-            className="text-violet-red hover:underline text-sm font-medium"
+            className="text-violet-red hover:underline text-md font-medium"
           >
             Delete all
           </button>
@@ -31,7 +31,7 @@ export default function TodoSummary({
         {completedTodos.length > 0 && (
           <button
             onClick={deleteAllCompleted}
-            className="text-violet-red hover:underline text-sm font-medium"
+            className="text-violet-red hover:underline text-md font-medium"
           >
             Delete all completed
           </button>
