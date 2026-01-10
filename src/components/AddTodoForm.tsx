@@ -22,12 +22,12 @@ export default function AddToForm({ onSubmit }: AddToFormProps) {
         value={input}
         onChange={(e) => setIntput(e.target.value)}
         placeholder="What needs to be done"
-        className="rounded-s-md grow border bg-white p-2 text-gray-800"
+        className="rounded-s-md grow border border-gray-300 bg-white p-2 text-gray-800 outline-none"
         type="text"
       />
       <button
         type="submit"
-        className="w-16 rounded-e-md bg-cyclamen border-cyclamen text-white font-semibold hover:bg-violet-red"
+        className="w-16 rounded-e-md bg-cyclamen border border-cyclamen p-2 text-white font-semibold hover:bg-violet-red transition-colors"
       >
         Add
       </button>
